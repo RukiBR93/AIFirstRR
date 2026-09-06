@@ -1,0 +1,37 @@
+erDiagram
+  USUARIO ||--o{ MASCOTA : "e dono de"
+  MASCOTA ||--o{ EVENTO_CUIDADO : "possui"
+  MASCOTA ||--o{ ACESSO_COMPARTILHADO : "e compartilhada via"
+  USUARIO ||--o{ ACESSO_COMPARTILHADO : "recebe acesso via"
+
+  USUARIO {
+    uuid id PK
+    string nome
+    string email
+  }
+  MASCOTA {
+    uuid id PK
+    uuid dono_id FK
+    string nome
+    string tipo_animal
+    string raca
+    string sexo
+    int idade
+    string foto_url
+    string status
+  }
+  EVENTO_CUIDADO {
+    uuid id PK
+    uuid mascota_id FK
+    string tipo_evento
+    date data
+    float peso
+    date proximo_evento
+    string notas
+  }
+  ACESSO_COMPARTILHADO {
+    uuid id PK
+    uuid mascota_id FK
+    uuid usuario_id FK
+    string status
+  }

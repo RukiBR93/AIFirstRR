@@ -1,0 +1,26 @@
+@startuml C3_Backend_EventPETS
+!include <C4/C4_Component>
+
+Container(app, "App móvel", "Flutter")
+ContainerDb(db, "Base de dados", "PostgreSQL (Supabase)")
+
+Container_Boundary(api, "Backend / API (NestJS)") {
+  Component(auth, "Auth / Autorização", "Módulo NestJS", "Valida identidade e permissões (dono original vs. acesso compartilhado)")
+  Component(mascotas, "Mascotas", "Módulo NestJS", "Cadastro, edição, arquivamento, compartilhar mascota")
+  Component(carne, "Carné / Histórico", "Módulo NestJS", "Lista de mascotas, visualização do carné, histórico")
+  Component(eventos, "Eventos de cuidado", "Módulo NestJS", "Registro e manutenção de eventos")
+  Component(recordatorios, "Recordatórios", "Módulo NestJS", "Gera avisos a partir do próximo evento")
+}
+
+Rel(app, auth, "Toda solicitação passa por aqui", "HTTPS")
+Rel(auth, mascotas, "Autoriza")
+Rel(auth, carne, "Autoriza")
+Rel(auth, eventos, "Autoriza")
+Rel(recordatorios, eventos, "Lê próximo evento")
+Rel(mascotas, db, "Lê/escreve")
+Rel(carne, db, "Lê")
+Rel(eventos, db, "Lê/escreve")
+Rel(recordatorios, db, "Lê")
+
+SHOW_LEGEND()
+@enduml

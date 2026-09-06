@@ -1,0 +1,13 @@
+@startuml C1_Context_EventPETS
+!include <C4/C4_Context>
+
+Person(tutor, "Tutor", "Dueño original de la mascota")
+Person(familiar, "Familiar / cuidador compartido", "Tiene acceso compartido a la mascota")
+
+System(eventpets, "EventPETS", "Carné virtual y recordatorios de cuidados para mascotas")
+
+Rel(tutor, eventpets, "Cadastra mascotas, registra eventos, consulta carné, recebe recordatórios")
+Rel(familiar, eventpets, "Consulta carné, vê próximos eventos, registra/edita eventos (v1)")
+
+SHOW_LEGEND()
+@enduml

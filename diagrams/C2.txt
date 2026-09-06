@@ -1,0 +1,19 @@
+@startuml C2_Container_EventPETS
+!include <C4/C4_Container>
+
+Person(tutor, "Tutor", "Dueño original de la mascota")
+Person(familiar, "Familiar / cuidador compartido", "Tiene acceso compartido a la mascota")
+
+System_Boundary(eventpets, "EventPETS") {
+  Container(app, "App móvel", "Flutter", "Interface principal do tutor e familiares")
+  Container(api, "Backend / API", "Node.js + NestJS", "Regras de negócio, autorização, endpoints REST")
+  ContainerDb(db, "Base de dados", "PostgreSQL (Supabase, inclui Auth)", "Persistência de tutores, mascotas, eventos e acessos compartilhados")
+}
+
+Rel(tutor, app, "Usa")
+Rel(familiar, app, "Usa")
+Rel(app, api, "Consome API", "HTTPS")
+Rel(api, db, "Lê/escreve dados")
+
+SHOW_LEGEND()
+@enduml
