@@ -2,7 +2,7 @@
 
 ## Visão Geral do Produto
 
-EventPETS é um aplicativo móvel de carnê virtual para mascotas que permite aos tutores registrar e consultar, pelo celular, os principais eventos recorrentes de cuidado. O produto resolve a perda do carnê físico e a falta de organização do histórico de vacinas, desparasitações e medicamentos. Quando o projeto estiver completo, o tutor poderá centralizar o cuidado de uma ou mais mascotas, visualizar o histórico por animal, receber lembretes antecipados e compartilhar o acompanhamento com outras pessoas responsáveis.
+EventPETS é uma aplicação web de carnê virtual para mascotas que permite aos tutores registrar e consultar, pelo navegador, os principais eventos recorrentes de cuidado. O produto resolve a perda do carnê físico e a falta de organização do histórico de vacinas, desparasitações e medicamentos. Quando o projeto estiver completo, o tutor poderá centralizar o cuidado de uma ou mais mascotas, visualizar o histórico por animal, receber lembretes antecipados e compartilhar o acompanhamento com outras pessoas responsáveis.
 
 ---
 
@@ -45,7 +45,7 @@ Permite que o dono original de uma mascota compartilhe seu registro com outras p
 
 ### Módulo: Carnê virtual e histórico
 
-Resolve a dificuldade de consultar rapidamente o histórico de uma mascota sem depender do carnê em papel. É usado por tutores e pessoas com acesso compartilhado para visualizar as informações principais de cada animal e acompanhar sua linha do tempo de cuidados. Entrega o núcleo de consulta do produto, transformando registros dispersos em um histórico acessível pelo celular.
+Resolve a dificuldade de consultar rapidamente o histórico de uma mascota sem depender do carnê em papel. É usado por tutores e pessoas com acesso compartilhado para visualizar as informações principais de cada animal e acompanhar sua linha do tempo de cuidados. Entrega o núcleo de consulta do produto, transformando registros dispersos em um histórico acessível pela web.
 
 #### Feature: Lista de mascotas
 
@@ -53,7 +53,7 @@ Apresenta a lista de mascotas cadastradas com informações básicas para facili
 
 #### Feature: Visualização do carnê virtual
 
-Permite acessar o carnê virtual de uma mascota específica a partir da lista principal, concentrando seu histórico de eventos em uma única visão. Essa consulta substitui o uso do carnê físico e fornece ao tutor uma fonte confiável de informação a qualquer momento pelo celular. O foco desta feature é a leitura organizada do histórico individual de cada animal, sem misturar eventos de outras mascotas.
+Permite acessar o carnê virtual de uma mascota específica a partir da lista principal, concentrando seu histórico de eventos em uma única visão. Essa consulta substitui o uso do carnê físico e fornece ao tutor uma fonte confiável de informação a qualquer momento pela web. O foco desta feature é a leitura organizada do histórico individual de cada animal, sem misturar eventos de outras mascotas.
 
 #### Feature: Histórico de eventos por mascota
 
@@ -92,7 +92,4 @@ Permite que o aplicativo avise antecipadamente quando um evento futuro estiver s
 | Integração com veterinárias | A primeira versão foca no uso direto pelos tutores, sem depender de sistemas externos |
 | Compras online de alimento | Não faz parte do problema principal atacado no escopo inicial |
 | Agenda de turnos e consultas | O foco atual é carnê virtual e eventos recorrentes, não gestão de agenda |
-| Ficha clínica completa | O produto inicial registra eventos de cuidado, sem cobrir prontuário veterinário amplo |
-| Multiusuário com permissões avançadas | O compartilhamento existirá, mas sem modelo complexo de papéis e permissões |
-| Controle de stock de alimento | Embora tenha surgido no conceito inicial, não foi incluído nos módulos macro definidos para a primeira versão |
-| Eventos de higiene e controle fora dos tipos definidos | A primeira versão restringe os eventos a vacina, desparasitação e medicamento para manter o escopo inicial viável |
+|

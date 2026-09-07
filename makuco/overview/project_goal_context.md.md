@@ -8,7 +8,7 @@
 
 **Repositório de código:** Ainda não definido
 
-**Última atualização:** 2026-09-03 — Makuco
+**Última atualização:** 2026-09-07 — Makuco
 
 ### Ambientes
 
@@ -24,7 +24,7 @@
 
 **Situação atual:** Clínicas veterinárias e profissionais costumam entregar um carnê físico para registrar vacinas e outros cuidados das mascotas. Na prática, esse documento frequentemente é perdido, esquecido ou guardado em um local que o tutor não consegue localizar quando precisa. Como consequência, o histórico fica disperso e o acompanhamento recorrente da saúde e dos cuidados do animal passa a depender da memória das pessoas.
 
-**Causa raiz:** O controle atual é baseado em papel e em registros manuais descentralizados, sem uma fonte digital única, acessível pelo celular e fácil de compartilhar entre as pessoas responsáveis pela mascota.
+**Causa raiz:** O controle atual é baseado em papel e em registros manuais descentralizados, sem uma fonte digital única, acessível pela web e fácil de compartilhar entre as pessoas responsáveis pela mascota.
 
 **Impacto:** Tutores de mascotas perdem visibilidade sobre os prazos corretos de vacinação e outros cuidados recorrentes. Isso pode levar a vacinas aplicadas fora do prazo, esquecimentos de desparasitações e medicamentos, dificuldade para consultar o histórico ao visitar o veterinário e menor continuidade no cuidado quando mais de uma pessoa acompanha a mesma mascota.
 
@@ -34,7 +34,7 @@
 
 **Onde devemos chegar com o projeto entregue:**
 
-- Permitir que o tutor consulte pelo celular o carnê virtual e o histórico de cuidados de cada mascota a qualquer momento.
+- Permitir que o tutor consulte pela web o carnê virtual e o histórico de cuidados de cada mascota a qualquer momento.
 - Centralizar em um único lugar o registro de vacinas, desparasitações, medicamentos e outros eventos recorrentes de cuidado.
 - Reduzir esquecimentos e atrasos em eventos importantes por meio de registro organizado e lembretes.
 - Permitir que mais de uma pessoa acompanhe a mesma mascota, compartilhando o registro de forma simples.
@@ -45,33 +45,33 @@
 
 ### Propósito
 
-EventPETS é um aplicativo para transformar o carnê físico de cuidado de mascotas em um registro digital acessível pelo celular. Seu propósito é ajudar tutores a manter o histórico e o acompanhamento de eventos recorrentes, como vacinas, desparasitações e administração de medicamentos. O sistema busca reduzir perdas de informação, atrasos em cuidados importantes e a dependência de anotações em papel.
+EventPETS é uma aplicação para transformar o carnê físico de cuidado de mascotas em um registro digital acessível pela web. Seu propósito é ajudar tutores a manter o histórico e o acompanhamento de eventos recorrentes, como vacinas, desparasitações e administração de medicamentos. O sistema busca reduzir perdas de informação, atrasos em cuidados importantes e a dependência de anotações em papel.
 
 ### Público-Alvo e Usuários
 
-**Perfil 1 — Tutor de mascota**  
-Descrição: pessoa responsável pelo cuidado diário de uma ou mais mascotas, que precisa acompanhar vacinas, medicamentos e demais eventos recorrentes.  
+**Perfil 1 — Tutor de mascota**
+Descrição: pessoa responsável pelo cuidado diário de uma ou mais mascotas, que precisa acompanhar vacinas, medicamentos e demais eventos recorrentes.
 O que faz e quando faz: cadastra mascotas, consulta o carnê virtual, registra eventos de cuidado e acompanha lembretes no dia a dia.
 
-**Perfil 2 — Familiar ou cuidador compartilhado**  
-Descrição: pessoa do círculo familiar ou de apoio que também participa do cuidado da mascota, mesmo sem ser o responsável principal.  
+**Perfil 2 — Familiar ou cuidador compartilhado**
+Descrição: pessoa do círculo familiar ou de apoio que também participa do cuidado da mascota, mesmo sem ser o responsável principal.
 O que faz e quando faz: consulta o histórico da mascota, verifica próximos eventos e acompanha registros compartilhados quando ajuda no cuidado.
 
-**Perfil 3 — Dono com múltiplas mascotas**  
-Descrição: tutor que possui mais de uma mascota e precisa organizar rotinas de cuidado separadas para cada uma.  
+**Perfil 3 — Dono com múltiplas mascotas**
+Descrição: tutor que possui mais de uma mascota e precisa organizar rotinas de cuidado separadas para cada uma.
 O que faz e quando faz: alterna entre perfis de mascotas, registra eventos individualmente e acompanha o histórico de cada animal sem misturar informações.
 
 ### Contexto de Mercado e Posicionamento
 
 **Contexto de mercado:** O sistema se insere no segmento de aplicativos de organização de cuidados para mascotas, com foco em saúde preventiva e rotina de acompanhamento doméstico. Há uma necessidade comum entre tutores de manter registros confiáveis e acessíveis sem depender de documentos físicos.
 
-**Posicionamento:** EventPETS se posiciona como uma solução simples de carnê virtual para mascotas, centrada no registro recorrente de cuidados e no acesso móvel ao histórico. Seu diferencial é substituir o carnê em papel por uma experiência digital prática e compartilhável entre responsáveis.
+**Posicionamento:** EventPETS se posiciona como uma solução simples de carnê virtual para mascotas, centrada no registro recorrente de cuidados e no acesso via web ao histórico. Seu diferencial é substituir o carnê em papel por uma experiência digital prática e compartilhável entre responsáveis.
 
 **Público-alvo de mercado:** Tutores individuais, famílias e lares com uma ou mais mascotas que precisam organizar cuidados recorrentes e manter o histórico sempre disponível.
 
 ### Contexto de Uso pelo Cliente
 
-O sistema será usado no contexto cotidiano dos tutores, principalmente pelo celular, para registrar eventos de cuidado no momento em que acontecem e para consultar rapidamente o histórico quando necessário. Ele apoia processos simples de controle doméstico da saúde preventiva da mascota, como verificar vacinas aplicadas, registrar desparasitações, acompanhar medicamentos e lembrar próximos cuidados. Nesta fase inicial, não há integração prevista com sistemas de clínicas veterinárias, compras, agendamentos ou prontuários externos.
+O sistema será usado no contexto cotidiano dos tutores, principalmente pelo navegador web, para registrar eventos de cuidado no momento em que acontecem e para consultar rapidamente o histórico quando necessário. Ele apoia processos simples de controle doméstico da saúde preventiva da mascota, como verificar vacinas aplicadas, registrar desparasitações, acompanhar medicamentos e lembrar próximos cuidados. Nesta fase inicial, não há integração prevista com sistemas de clínicas veterinárias, compras, agendamentos ou prontuários externos.
 
 ---
 
