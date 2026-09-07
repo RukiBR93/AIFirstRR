@@ -60,41 +60,38 @@ export default function HomePage() {
   }, [session]);
 
   return (
-    <main style={{ padding: 24, fontFamily: 'sans-serif' }}>
-      <h1>EventPETS</h1>
+    <main className="page" style={{ maxWidth: 560 }}>
+      <div className="topbar">
+        <h1 style={{ margin: 0 }}>EventPETS</h1>
+        {session && (
+          <button className="btn btn-secondary" onClick={() => supabase.auth.signOut()}>
+            Sair
+          </button>
+        )}
+      </div>
 
       {carregandoSessao ? (
-        <p>Carregando...</p>
+        <p className="muted">Carregando...</p>
       ) : session ? (
         <>
-          <p>Logado como {session.user.email}.</p>
+          <p className="muted">Logado como {session.user.email}.</p>
           <p>
             <a href="/mascotas/new">Cadastrar mascota</a>
           </p>
-          <button onClick={() => supabase.auth.signOut()}>Sair</button>
 
           <h2>Minhas mascotas</h2>
 
-          {carregandoMascotas && <p>Carregando mascotas...</p>}
-          {erro && <p style={{ color: 'red' }}>{erro}</p>}
+          {carregandoMascotas && <p className="muted">Carregando mascotas...</p>}
+          {erro && <p className="alert alert-error">{erro}</p>}
 
           {!carregandoMascotas && !erro && mascotas.length === 0 && (
-            <p>Nenhuma mascota cadastrada ainda.</p>
+            <p className="muted">Nenhuma mascota cadastrada ainda.</p>
           )}
 
           {mascotas.length > 0 && (
-            <ul style={{ listStyle: 'none', padding: 0 }}>
+            <ul className="pet-list">
               {mascotas.map((m) => (
-                <li
-                  key={m.id}
-                  style={{
-                    border: '1px solid #ddd',
-                    borderRadius: 8,
-                    padding: 12,
-                    marginBottom: 8,
-                    maxWidth: 420,
-                  }}
-                >
+                <li key={m.id} className="pet-item">
                   <strong>{m.nome}</strong> — {m.tipo_animal}, {m.raca},{' '}
                   {m.sexo === 'macho' ? 'macho' : 'fêmea'}, {m.idade} ano(s)
                 </li>
@@ -103,7 +100,7 @@ export default function HomePage() {
           )}
         </>
       ) : (
-        <p>
+        <p className="muted">
           Lista de mascotas — feature ainda não implementada nesta v1. Para
           cadastrar uma mascota, primeiro <a href="/login">entre</a>.
         </p>

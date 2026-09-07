@@ -72,66 +72,68 @@ export default function NovaMascotaPage() {
 
   if (verificandoSessao) {
     return (
-      <main style={{ padding: 24, fontFamily: 'sans-serif', maxWidth: 420 }}>
-        <p>Carregando...</p>
+      <main className="page">
+        <p className="muted">Carregando...</p>
       </main>
     );
   }
 
   return (
-    <main style={{ padding: 24, fontFamily: 'sans-serif', maxWidth: 420 }}>
-      <h1>Nova mascota</h1>
+    <main className="page">
+      <div className="card">
+        <h1>Nova mascota</h1>
 
-      <form onSubmit={handleSubmit}>
-        <label>
-          Nome*
-          <input value={nome} onChange={(e) => setNome(e.target.value)} required />
-        </label>
+        <form onSubmit={handleSubmit}>
+          <label className="field">
+            Nome*
+            <input value={nome} onChange={(e) => setNome(e.target.value)} required />
+          </label>
 
-        <label>
-          Tipo de animal*
-          <select value={tipoAnimal} onChange={(e) => setTipoAnimal(e.target.value as any)}>
-            <option value="perro">Perro</option>
-            <option value="gato">Gato</option>
-            <option value="ave">Ave</option>
-          </select>
-        </label>
+          <label className="field">
+            Tipo de animal*
+            <select value={tipoAnimal} onChange={(e) => setTipoAnimal(e.target.value as any)}>
+              <option value="perro">Perro</option>
+              <option value="gato">Gato</option>
+              <option value="ave">Ave</option>
+            </select>
+          </label>
 
-        <label>
-          Raça*
-          <input value={raca} onChange={(e) => setRaca(e.target.value)} required />
-        </label>
+          <label className="field">
+            Raça*
+            <input value={raca} onChange={(e) => setRaca(e.target.value)} required />
+          </label>
 
-        <label>
-          Sexo*
-          <select value={sexo} onChange={(e) => setSexo(e.target.value as any)}>
-            <option value="macho">Macho</option>
-            <option value="femea">Fêmea</option>
-          </select>
-        </label>
+          <label className="field">
+            Sexo*
+            <select value={sexo} onChange={(e) => setSexo(e.target.value as any)}>
+              <option value="macho">Macho</option>
+              <option value="femea">Fêmea</option>
+            </select>
+          </label>
 
-        <label>
-          Idade*
-          <input
-            type="number"
-            min={0}
-            value={idade}
-            onChange={(e) => setIdade(e.target.value === '' ? '' : Number(e.target.value))}
-            required
-          />
-        </label>
+          <label className="field">
+            Idade*
+            <input
+              type="number"
+              min={0}
+              value={idade}
+              onChange={(e) => setIdade(e.target.value === '' ? '' : Number(e.target.value))}
+              required
+            />
+          </label>
 
-        {/* Foto: v1 assume upload direto ao Supabase Storage no frontend
-            e envio apenas da foto_url resultante — não implementado
-            ainda neste esqueleto. */}
+          {/* Foto: v1 assume upload direto ao Supabase Storage no frontend
+              e envio apenas da foto_url resultante — não implementado
+              ainda neste esqueleto. */}
 
-        <button type="submit" disabled={!camposObrigatoriosOk || enviando}>
-          {enviando ? 'Cadastrando...' : 'Cadastrar'}
-        </button>
-      </form>
+          <button className="btn" type="submit" disabled={!camposObrigatoriosOk || enviando}>
+            {enviando ? 'Cadastrando...' : 'Cadastrar'}
+          </button>
+        </form>
 
-      {erro && <p style={{ color: 'red' }}>{erro}</p>}
-      {sucesso && <p style={{ color: 'green' }}>Mascota cadastrada com sucesso!</p>}
+        {erro && <p className="alert alert-error">{erro}</p>}
+        {sucesso && <p className="alert alert-success">Mascota cadastrada com sucesso!</p>}
+      </div>
     </main>
   );
 }

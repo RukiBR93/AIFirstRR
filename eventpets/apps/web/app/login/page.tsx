@@ -35,36 +35,38 @@ export default function LoginPage() {
   }
 
   return (
-    <main style={{ padding: 24, fontFamily: 'sans-serif', maxWidth: 420 }}>
-      <h1>Entrar</h1>
+    <main className="page">
+      <div className="card">
+        <h1>Entrar</h1>
 
-      <form onSubmit={handleSubmit}>
-        <label>
-          E-mail*
-          <input
-            type="email"
-            value={email}
-            onChange={(e) => setEmail(e.target.value)}
-            required
-          />
-        </label>
+        <form onSubmit={handleSubmit}>
+          <label className="field">
+            E-mail*
+            <input
+              type="email"
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
+              required
+            />
+          </label>
 
-        <label>
-          Senha*
-          <input
-            type="password"
-            value={senha}
-            onChange={(e) => setSenha(e.target.value)}
-            required
-          />
-        </label>
+          <label className="field">
+            Senha*
+            <input
+              type="password"
+              value={senha}
+              onChange={(e) => setSenha(e.target.value)}
+              required
+            />
+          </label>
 
-        <button type="submit" disabled={!camposObrigatoriosOk || enviando}>
-          {enviando ? 'Entrando...' : 'Entrar'}
-        </button>
-      </form>
+          <button className="btn" type="submit" disabled={!camposObrigatoriosOk || enviando}>
+            {enviando ? 'Entrando...' : 'Entrar'}
+          </button>
+        </form>
 
-      {erro && <p style={{ color: 'red' }}>{erro}</p>}
+        {erro && <p className="alert alert-error">{erro}</p>}
+      </div>
     </main>
   );
 }
