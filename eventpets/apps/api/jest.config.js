@@ -7,6 +7,7 @@ module.exports = {
   },
   testRegex: '.*\\.spec\\.ts$',
   moduleFileExtensions: ['js', 'json', 'ts'],
-  collectCoverageFrom: ['**/*.ts', '!**/*.module.ts', '!main.ts'],
+  collectCoverageFrom: ['**/*.ts', '!**/*.module.ts', '!**/*.spec.ts', '!main.ts'],
   coverageDirectory: '../coverage',
+  coverageReporters: ['text', 'lcov'],
 };
