@@ -35,6 +35,15 @@ diagrama C3: `auth`, `mascotas`, `carne`, `eventos`, `recordatorios`.
    npm run dev:web
    ```
 
+## Testes
+
+- **API** (Jest + `@nestjs/testing`): `npm test --workspace=apps/api`
+- **Web** (Vitest + Testing Library): `npm test --workspace=apps/web`
+
+Cobrem a validação do DTO de mascota, o `MascotasService`/`MascotasController`
+(com o Supabase mockado), o `AuthGuard`, e as páginas de login e lista de
+mascotas do frontend (Supabase e `next/navigation` mockados).
+
 ## Status desta v1
 
 Implementado de ponta a ponta: login (Supabase Auth), "Cadastro de
