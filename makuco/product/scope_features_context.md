@@ -92,4 +92,5 @@ Permite que o aplicativo avise antecipadamente quando um evento futuro estiver s
 | Integração com veterinárias | A primeira versão foca no uso direto pelos tutores, sem depender de sistemas externos |
 | Compras online de alimento | Não faz parte do problema principal atacado no escopo inicial |
 | Agenda de turnos e consultas | O foco atual é carnê virtual e eventos recorrentes, não gestão de agenda |
-|
+| Ficha clínica completa / prontuário veterinário | A primeira versão foca em registro recorrente de cuidados preventivos, não em gestão clínica abrangente |
+| Multiusuário familiar avançado com permissões complexas | O compartilhamento já está no escopo inicial, mas sem papéis ou permissões sofisticadas nesta primeira versão |
